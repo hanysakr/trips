@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "c7c0c671-ce27-4192-a59f-5feeba55df86",
+		"name": "TRIPS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/sort",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destniationMap\": [\r\n        {\r\n            \"from\": {\r\n                \"name\": \"Madrid\"\r\n            },\r\n            \"to\": {\r\n                \"name\": \"Barcelona\"\r\n            },\r\n            \"transportType\": \"TRAIN\",\r\n            \"seat\": \"Sit in seat 45B\",\r\n            \"name\": \"78A\",\r\n            \"description\": \"Take TRAIN 78A from Madrid to Barcelona. Sit in seat 45B\"\r\n        },\r\n        {\r\n            \"from\": {\r\n                \"name\": \"Barcelona\"\r\n            },\r\n            \"to\": {\r\n                \"name\": \"Gerona AirPort\"\r\n            },\r\n            \"transportType\": \"BUS\",\r\n            \"seat\": \"No seat assignment\",\r\n            \"name\": \"airport\",\r\n            \"description\": \"Take the airport BUS from Barcelona to Gerona AirPort. No seat assignment\"\r\n        },\r\n        {\r\n            \"from\": {\r\n                \"name\": \"Gerona AirPort\"\r\n            },\r\n            \"to\": {\r\n                \"name\": \"Stockholm\"\r\n            },\r\n            \"transportType\": \"FLIGHT\",\r\n            \"seat\": \"Sit in seat 3A\",\r\n            \"name\": \"SK455\",\r\n            \"gate\": \"45B\",\r\n            \"baggageCounter\": \"Baggage drop at ticket counter 344\",\r\n            \"description\": \"From Gerona AirPort Airport, take FLIGHT SK455 to Stockholm. Gate 45B,Sit in seat 3A Baggage drop at ticket counterBaggage drop at ticket counter 344.\"\r\n        },\r\n        {\r\n            \"from\": {\r\n                \"name\": \"Stockholm\"\r\n            },\r\n            \"to\": {\r\n                \"name\": \"New York JFK\"\r\n            },\r\n            \"transportType\": \"FLIGHT\",\r\n            \"seat\": \"Sit in seat 7B\",\r\n            \"name\": \"SK22\",\r\n            \"gate\": \"22\",\r\n            \"baggageCounter\": \"Baggage will we automatically transferred from your last leg\",\r\n            \"description\": \"From Stockholm Airport, take FLIGHT SK22 to New York JFK. Gate 22,Sit in seat 7B Baggage drop at ticket counterBaggage will we automatically transferred from your last leg.\"\r\n        }\r\n    ],\r\n    \"from\": {\r\n        \"name\": \"Madrid\"\r\n    },\r\n    \"to\": {\r\n        \"name\": \"New York JFK\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sort",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sort"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
